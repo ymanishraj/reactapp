@@ -113,4 +113,4 @@ class OrderComponent extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<ToDoList />, document.querySelector('#root'));
