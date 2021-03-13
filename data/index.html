@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Server</title>
+</head>
+<body>
+    <ul>
+        <li><a href="./data.json">data</a></li>
+    </ul>
+</body>
+<script>
+    let products;
+
+    fetch('./data.json').then(response => {
+        return response.json();
+    }).then(data => {
+        // console.log(data);
+        products = data;
+        showData(data)
+        return data;
+    })
+
+    function showData(data) {
+        console.log(data);
+    }
+</script>
+</html>
